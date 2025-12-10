@@ -332,8 +332,8 @@ body {
 
 /* Content Improvements */
 .content.has-text-justified {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 

@@ -197,16 +197,20 @@
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a target="_blank">Ziken Huang,</a></span>
-                <span class="author-block">
-                  <a target="_blank">Xinze Niu,</a></span>
-                  <span class="author-block">
-                    <a target="_blank">Bowen Chai,</a></span>
-                    <span class="author-block">
-                    <a target="_blank">Renbiao Jin,</a></span>
-                    <span class="author-block">
-                    <a target="_blank">Danping Zou*</a></span>
-                  
+                Ziken Huang,
+              </span>
+              <span class="author-block">
+                Xinze Niu,
+              </span>
+              <span class="author-block">
+                Bowen Chai,
+              </span>
+              <span class="author-block">
+                Renbiao Jin,
+              </span>
+              <span class="author-block">
+                Danping Zou*
+              </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -280,12 +284,12 @@
             <img src="static/images/real3.jpg" alt="Research result" style="width: 100%; height: auto; margin-bottom: 5px; cursor: zoom-in;">
           </a>
           
-          <h2 class="subtitle has-text-justified">
-            (a) Our policy exhibits active manipulation behavior: the agent
+          <h5 class="content has-text-justified">
+            (a) Our deep reinforcement learning policy exhibits active manipulation behavior: the agent
 actively opens the gripper in preparation for grasping and then determines the appropriate timing to close it swiftly (within
 0.1s) to enable a smooth and rapid swooping motion for high-speed aerial grasping. (b) Our policy can robustly grasp objects
 placed at different positions and yaw orientations with grasping speeds of up to 1.5 m/s.
-          </h2>
+          </h5>
 
         </div>
       </div>
@@ -329,8 +333,8 @@ we propose Swooper, a deep reinforcement learning (DRL) based approach that achi
 Training such a policy directly via DRL is nontrivial due to the complexity of coordinating flight and grasping. To address this, we adopt a two-stage learning strategy: we first pre-train 
 a flight control policy, and then fine-tune it to acquire grasping skills. With the carefully designed reward functions and training framework, the entire training process completes in under 
 60 minutes on a standard desktop with an Nvidia RTX 3060 GPU. To validate the trained policy in the real world, we develop a lightweight quadrotor grasping platform equipped with a simple 
-off-the-shelf gripper, and deploy the policy in a zero-shot manner on the onboard Raspberry Pi 4B computer, where each inference takes only about 1.0 ms. In 25 realworld trials, our policy 
-achieves an 84% grasp success rate and grasping speeds of up to 1.5 m/s without any fine-tuning. This matches the robustness and agility of state-of-the-art classical systems with sophisticated grippers, 
+off-the-shelf gripper, and deploy the policy in a zero-shot manner on the onboard Raspberry Pi 4B computer, where each inference takes only about 1.0 ms. In 25 real-world trials, our policy 
+achieves an 84% grasp success rate and grasping speeds of up to 1.5~m/s without any fine-tuning. This matches the robustness and agility of state-of-the-art classical systems with sophisticated grippers, 
 highlighting the capability of DRL for learning a robust control policy that seamlessly integrates high-speed flight and grasping.
           </p>
         </div>
@@ -357,7 +361,7 @@ highlighting the capability of DRL for learning a robust control policy that sea
           
           <br>
           
-          <h2 class="subtitle has-text-justified">
+          <h2 class="content has-text-justified">
            Our two-stage DRL-based approach first trains a flight control policy and then fine-tunes it to acquire
 gripper control, finally yielding a unified and lightweight aerial grasping policy. Each stage is guided by a tailored reward
 function. The policy network takes the current and desired states of the quadrotor as input, and outputs a CTBR command
@@ -393,7 +397,7 @@ for flight control and a gripper control command. OTE refers to the Online Throt
       </div>
       <pre id="bibtex-code"><code>@article{swooper_2025,
   title={Swooper: Learning High-Speed Aerial Grasping with a Simple Gripper},
-  author={Ziken Huang, Xinze Niu, Bowen Chai, Renbiao Jin, Danping Zou},
+  author={Ziken, Huang and Xinze, Niu and Bowen, Chai and Renbiao, Jin and Danping, Zou},
   journal={IEEE Robotics and Automation Letters},
   year={2025},
 }</code></pre>
@@ -423,6 +427,30 @@ for flight control and a gripper control command. OTE refers to the Online Throt
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+<!-- 设置视频只在页面滑到该处时才进行播放 -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const video = document.getElementById('tree');
+  let played = false;
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < window.innerHeight &&
+      rect.bottom > 0
+    );
+  }
+  function checkAndPlay() {
+    if (!played && isInViewport(video)) {
+      video.play();
+      played = true;
+      window.removeEventListener('scroll', checkAndPlay);
+    }
+  }
+  window.addEventListener('scroll', checkAndPlay);
+  // 可选：页面加载时如果视频已在视口内也自动播放
+  checkAndPlay();
+});
+</script>
 
   </body>
   </html>
