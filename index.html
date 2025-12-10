@@ -189,10 +189,11 @@
   <main id="main-content">
   <section class="hero is-small">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-max-desktop is-max-800">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
+            <br>
             <h1 class="title is-2 publication-title">Swooper: Learning High-Speed Aerial Grasping with a Simple Gripper</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
@@ -216,7 +217,7 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block" style="font-size: 1.0em; font-weight: 600;">Shanghai Jiao Tong University</span>
                     <br>
-                    <span class="author-block" style="font-size: 1.6em; font-weight: 600; margin-top: 1.0em">RAL 2025</span>
+                    <span class="author-block" style="font-size: 1.6em; font-weight: 600; margin-top: 0.6em">RAL 2025</span>
                     <!-- <br> -->
                   </div>
 
@@ -277,7 +278,7 @@
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-max-desktop is-max-800">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <a href="static/images/real3.jpg" target="_blank">
@@ -300,7 +301,7 @@ placed at different positions and yaw orientations with grasping speeds of up to
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop is-max-800">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
@@ -322,7 +323,7 @@ placed at different positions and yaw orientations with grasping speeds of up to
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
-  <div class="container is-max-desktop">
+  <div class="container is-max-desktop is-max-800">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <h2 class="title is-3">Abstract</h2>
@@ -334,7 +335,7 @@ Training such a policy directly via DRL is nontrivial due to the complexity of c
 a flight control policy, and then fine-tune it to acquire grasping skills. With the carefully designed reward functions and training framework, the entire training process completes in under 
 60 minutes on a standard desktop with an Nvidia RTX 3060 GPU. To validate the trained policy in the real world, we develop a lightweight quadrotor grasping platform equipped with a simple 
 off-the-shelf gripper, and deploy the policy in a zero-shot manner on the onboard Raspberry Pi 4B computer, where each inference takes only about 1.0 ms. In 25 real-world trials, our policy 
-achieves an 84% grasp success rate and grasping speeds of up to 1.5~m/s without any fine-tuning. This matches the robustness and agility of state-of-the-art classical systems with sophisticated grippers, 
+achieves an 84% grasp success rate and grasping speeds of up to 1.5 m/s without any fine-tuning. This matches the robustness and agility of state-of-the-art classical systems with sophisticated grippers, 
 highlighting the capability of DRL for learning a robust control policy that seamlessly integrates high-speed flight and grasping.
           </p>
         </div>
@@ -344,23 +345,17 @@ highlighting the capability of DRL for learning a robust control policy that sea
 </section>
 <!-- End paper abstract -->
 
-
-
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-max-desktop is-max-800">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
-          
-          <h2 class="title is-3">System Overview</h2>
-
-          <a href="static/images/algo2.jpg" target="_blank">
-            <img src="static/images/algo2.jpg" alt="Research result" style="width: 100%; height: auto; margin-bottom: 20px; cursor: zoom-in;">
-          </a>
-          
           <br>
-          
+          <h2 class="title is-3">System Overview</h2>
+          <a href="static/images/algo2.jpg" target="_blank">
+            <img src="static/images/algo2.jpg" alt="Research result" style="width: 100%; height: auto; margin-bottom: 10px; cursor: zoom-in;">
+          </a>
           <h2 class="content has-text-justified">
            Our two-stage DRL-based approach first trains a flight control policy and then fine-tunes it to acquire
 gripper control, finally yielding a unified and lightweight aerial grasping policy. Each stage is guided by a tailored reward
@@ -387,7 +382,7 @@ for flight control and a gripper control command. OTE refers to the Online Throt
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
+    <div class="container is-max-desktop is-max-800 content">
       <div class="bibtex-header">
         <h2 class="title">BibTeX</h2>
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
